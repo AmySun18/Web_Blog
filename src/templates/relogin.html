@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container page-form">
+    <form id="re-login-form" action="/auth/login" method="post">
+        <h3> Ops! The password doesn't match the user. Please try again</h3>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="text" id="email" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control"   name="password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+</div>
+{% endblock %}

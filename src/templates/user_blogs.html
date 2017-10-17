@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container full-page-form">
+    <h2> Welcome Back, {{ email }}!
+        <a href="/blogs/new" class="btn btn-primary">New Blog</a>
+    </h2>
+    <hr>
+    {% for blog in blogs %}
+        <h3><a href="/posts/{{ blog._id }}" >{{ blog.title }}</a></h3>
+        <p>{{ blog.description}}</p>
+        <hr>
+    {% endfor %}
+</div>
+{% endblock %}

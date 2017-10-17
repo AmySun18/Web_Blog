@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container full-page-form">
+    <h2>{{ blog_title }} </h2>
+    {% if posts|length > 0 %}
+        {% for post in posts %}
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content}}</p>
+            <p>{{ post.author }}</p>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <h4>There aren't any posts yet!</h4>
+    {% endif %}
+     <a href="/posts/new/{{ blog_id }}" class="btn btn-primary">Create a Post</a>
+</div>
+{% endblock %}
